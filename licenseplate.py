@@ -28,22 +28,22 @@ class Solution:
         # return: int
         
         # TODO: Write code below to return an int with the solution to the prompt
-        total = 1
-        count1 = 0
-        count2 = 0
-
+        c = 0
         for i in range(0, 3):
             if(str[i] == '.'):
-                count1 += 1
+                c += 1
         
+        k = 0
         for i in range(3, 7):
             if(str[i] == '.'):
-                count2 += 1
+                k += 1
         
-        for i in range(24, 24 + count1):
+        total = 1
+        
+        for i in range(24, 24 + c):
             total *= i
         
-        for i in range(7, 7 + count2):
+        for i in range(7, 7 + k):
             result *= i
         
         return total
