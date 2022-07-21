@@ -29,16 +29,14 @@ class Solution:
         
         # TODO: Write code below to return an int with the solution to the prompt
         total = 1
-        count1 = 3 - str[0:3].count(".")
-        count2 = 4 - str[3:].count(".")
+        count1 = str[0:3].count(".")
+        count2 = str[3:].count(".")
 
-        for i in range(len(str) - 1):
-            if i < 3 and str[i] == ".":
-                total *= (26 - count1)
-                count1 += 1
-            if i >= 3 and str[i] == ".":
-                total *= (10 - count2)
-                count2 += 1
+        for i in range(count1):
+            total *= (26 - 3 + count1)
+            count1 += 1
+        for i in range(count2):
+            total *= (10 - 4 + count2)
         
         return total
 
