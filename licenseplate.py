@@ -36,7 +36,7 @@ class Solution:
             if i < 3 and str[i] == ".":
                 total *= (26 - count1)
                 count1 += 1
-            if i > 3 and str[i] == ".":
+            if i >= 3 and str[i] == ".":
                 total *= (10 - count2)
                 count2 += 1
         
