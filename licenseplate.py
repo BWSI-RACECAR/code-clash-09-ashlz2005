@@ -29,14 +29,22 @@ class Solution:
         
         # TODO: Write code below to return an int with the solution to the prompt
         total = 1
-        count1 = str[0:3].count(".")
-        count2 = str[3:].count(".")
+        count1 = 0
+        count2 = 0
 
-        for i in range(count1):
-            total *= (26 - 3 + count1)
-            count1 += 1
-        for i in range(count2):
-            total *= (10 - 4 + count2)
+        for i in range(0, 3):
+            if(str[i] == '.'):
+                count1 += 1
+        
+        for i in range(3, 7):
+            if(str[i] == '.'):
+                count2 += 1
+        
+        for i in range(24, 24 + count1):
+            total *= i
+        
+        for i in range(7, 7 + count2):
+            result *= i
         
         return total
 
