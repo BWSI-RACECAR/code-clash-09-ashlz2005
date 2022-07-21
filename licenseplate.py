@@ -44,7 +44,7 @@ class Solution:
             total *= i
         
         for i in range(7, 7 + k):
-            result *= i
+            total *= i
         
         return total
 
